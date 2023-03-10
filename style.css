@@ -33,7 +33,8 @@ h2 {
     height: 100vh;
     color: #ffffff;
     display: grid;
-    grid-template-columns: 33vw 33vw 33vw;
+    position: relative;
+    grid-template-columns: calc(100vw/3) calc(100vw/3) calc(100vw/3);
     padding: 0;
     margin: 0;
 }
@@ -50,22 +51,32 @@ h2 {
     background-color: rgba(20, 30, 40, 0.5);
     display: grid;
     height: 100vh;
-    transform: skewX(-10deg);
     overflow: hidden;
 }
 
 .directory-text {
     align-self: center;
     text-align: center;
-    transform: skewX(10deg);
     background-color: rgba(20, 20, 20, 0.2);
+    z-index: 1;
 }
 
 .directory-img {
     position: absolute;
-    transform: skewX(10deg);
     height: 100%;
-    margin-left: calc(-100vh * 0.09 - 100vh*(3/2)/4); /*slope of a line 10 degrees from vertical  5.6712818*/
-    align-self: center;
+    z-index: 0;
     display: block;
+}
+
+.skew {
+    transform: skewX(10deg);
+}
+
+.anti-skew {
+    transform: skewX(-10deg);
+    z-index: 1;
+}
+
+.skew-compensation {
+    margin-left: calc(-100vh * 0.09); /*slope of a line 10 degrees from vertical  5.6712818*/
 }

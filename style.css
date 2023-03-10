@@ -1,0 +1,71 @@
+body {
+    display: grid;
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+#IndexHello {
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
+    top: 0;
+    left: 0;
+    position: relative;
+    align-content: center;
+    display: grid;
+}
+
+h1 {
+    font-size: 15em;
+    font-weight: bold;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5em;
+    font-weight: bold;
+    text-align: center;
+}
+
+#IndexDirectories {
+    width: 100vw;
+    height: 100vh;
+    color: #ffffff;
+    display: grid;
+    grid-template-columns: 33vw 33vw 33vw;
+    padding: 0;
+    margin: 0;
+}
+
+.indexHead {
+    font-size: 5vw;
+    padding: 0;
+    margin: 0;
+}
+
+.directory {
+    padding: 0;
+    margin: 0;
+    background-color: rgba(20, 30, 40, 0.5);
+    display: grid;
+    height: 100vh;
+    transform: skewX(-10deg);
+    overflow: hidden;
+}
+
+.directory-text {
+    align-self: center;
+    text-align: center;
+    transform: skewX(10deg);
+    background-color: rgba(20, 20, 20, 0.2);
+}
+
+.directory-img {
+    position: absolute;
+    transform: skewX(10deg);
+    height: 100%;
+    margin-left: calc(-100vh * 0.09 - 100vh*(3/2)/4); /*slope of a line 10 degrees from vertical  5.6712818*/
+    align-self: center;
+    display: block;
+}

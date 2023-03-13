@@ -23,6 +23,8 @@ body {
     display: grid;
     position: relative;
     grid-template-rows: calc(100%/3) calc(100%/3) calc(100%/3);
+    grid-row-gap: 0;
+    grid-column-gap: 0;
     padding: 0;
     margin: 0;
 }
@@ -50,7 +52,7 @@ h2 {
 
 .directory-img {
     position: absolute;
-    height: 100%;
+    max-height: calc(100%/3);
     width: 100%;
     z-index: 0;
     display: block;
@@ -81,6 +83,13 @@ h2 {
 
     #IndexDirectories {
         grid-template-columns: calc(100%/3) calc(100%/3) calc(100%/3);
+    }
+
+    .directory-img {
+        max-width: calc(100%/3);
+        width: none;
+        max-height: none;
+        height: 100%;
     }
 }
 
